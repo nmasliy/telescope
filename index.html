@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+	<link rel="stylesheet" href="css/reset.css">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;500&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="css/main.css">
+</head>
+
+<body>
+
+	<section class="main">
+		<div class="container">
+			<div class="main__inner">
+				<h1 class="main__title">TeleSpase</h1>
+				<h2 class="main__subtitle">Оплата услуг онлайн</h2>
+				<form action="#" class="main__form">
+					<div class="main__caption">Введите сумму платежа</div>
+					<div class="main__input-wrapper">
+						<input class="main__input input-reset" required type="text">
+					</div>
+					<div class="main__checkbox">
+						<label>
+							<input type="checkbox" name="policy" required>
+							<span class="main__checkbox-item"></span>
+							<span class="main__checkbox-text">Я согласен с <a href="#" target="_blank">офертой</a></span>
+						</label>
+					</div>
+					<!-- Заблокированная кнопка -->
+					<button class="main__btn btn-reset is-disabled">Оплатить на ИП</button>
+					<!-- /Заблокированная кнопка -->
+
+					<!-- Обычная кнопка -->
+					<!-- <button class="main__btn btn-reset">Оплатить на ИП</button> -->
+					<!-- /Обычная кнопка -->
+				</form>
+			</div>
+		</div>
+	</section>
+
+	<script src="js/imask.js"></script>
+	<script src="js/simpleModal.js"></script>
+	<script src="js/main.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,335 @@
+@charset "UTF-8";
+html {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  scroll-behavior: smooth;
+  height: 100%;
+}
+
+*,
+*::before,
+*::after {
+  -webkit-box-sizing: inherit;
+          box-sizing: inherit;
+}
+
+body {
+  font-family: "Raleway", sans-serif;
+  -webkit-text-size-adjust: 100%;
+  min-width: 320px;
+  min-height: 100%;
+  font-size: 12px;
+  line-height: 1.2;
+  color: #fff;
+  background-color: #000110;
+}
+
+img,
+video {
+  height: auto;
+  max-width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.is-hidden {
+  display: none !important;
+}
+
+.btn-reset {
+  border: none;
+  padding: 0;
+  background: transparent;
+  cursor: pointer;
+}
+
+.list-reset {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.input-reset {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+       appearance: none;
+  border: none;
+  border-radius: 0;
+  background-color: #fff;
+}
+.input-reset::-webkit-search-decoration, .input-reset::-webkit-search-cancel-button, .input-reset::-webkit-search-results-button, .input-reset::-webkit-search-results-decoration {
+  display: none;
+}
+
+.visually-hidden {
+  position: absolute;
+  overflow: hidden;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  width: 1px;
+  height: 1px;
+  clip: rect(0 0 0 0);
+}
+
+.container {
+  margin: 0 auto;
+  padding: 0 15px;
+  max-width: 670px;
+}
+
+.disable-scroll {
+  overflow: hidden;
+}
+.disable-scroll body {
+  overflow: hidden;
+}
+
+.page-wrapper {
+  overflow: hidden;
+}
+
+.modal {
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  z-index: 20;
+  width: 100%;
+  height: 100%;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  background-color: rgba(0, 0, 0, 0.5);
+  opacity: 0;
+  -webkit-transition: opacity 0.3s ease-out;
+  transition: opacity 0.3s ease-out;
+}
+.modal * {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+.modal__wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 20px;
+  width: 100%;
+  height: 100%;
+  max-height: 92vh;
+}
+.modal__inner {
+  position: relative;
+  overflow: auto;
+  margin: auto;
+  border-radius: 15px;
+  padding: 25px 50px 90px 50px;
+  max-width: 800px;
+  max-height: 100%;
+  background-color: #fff;
+  color: #1B1B1B;
+}
+.modal__close {
+  position: absolute;
+  right: 25px;
+  top: 25px;
+  outline: transparent;
+  border: none;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  background: 0;
+  cursor: pointer;
+}
+.modal__title {
+  margin-bottom: 30px;
+  color: #1145FB;
+  font-weight: 500;
+  font-size: 32px;
+  line-height: 38px;
+  text-align: center;
+}
+.modal__text {
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 14px;
+}
+.modal[aria-hidden=true] {
+  display: none;
+}
+.modal[aria-hidden=false] {
+  display: block;
+}
+.modal.is-open {
+  opacity: 1;
+}
+
+.main {
+  min-height: 100vh;
+  padding: 110px 0;
+}
+.main__title {
+  margin-bottom: 30px;
+  text-align: center;
+  font-size: 64px;
+  line-height: 75px;
+  text-align: center;
+  background: linear-gradient(90.51deg, #ffffff 13.14%, #beb8ff 109.91%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-fill-color: transparent;
+}
+.main__subtitle {
+  text-align: center;
+  font-size: 40px;
+  line-height: 47px;
+  margin-bottom: 65px;
+}
+.main__form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.main__caption {
+  font-size: 20px;
+  line-height: 23px;
+  margin: 20px;
+}
+.main__input-wrapper {
+  position: relative;
+  font-size: 20px;
+  line-height: 23px;
+  display: block;
+  width: 255px;
+  background: transparent;
+  margin-bottom: 40px;
+}
+.main__input-wrapper::after {
+  position: absolute;
+  right: 20px;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  content: "₽";
+}
+.main__input {
+  text-align: center;
+  border: 1px solid #fff;
+  border-radius: 10px;
+  padding: 15px 45px 15px 30px;
+  color: #fff;
+  background-color: #000110;
+}
+.main__checkbox {
+  margin-bottom: 20px;
+  width: 255px;
+}
+.main__checkbox label {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.main__checkbox input {
+  display: none;
+}
+.main__checkbox input:checked ~ .main__checkbox-item {
+  background-color: #1145FB;
+}
+.main__checkbox input:checked ~ .main__checkbox-item::after {
+  opacity: 1;
+}
+.main__checkbox-item {
+  display: block;
+  width: 20px;
+  height: 20px;
+  background: #ffffff;
+  border: 1px solid #1145FB;
+  border-radius: 4px;
+  -webkit-transition: 0.25s ease-in-out;
+  transition: 0.25s ease-in-out;
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
+  position: relative;
+}
+.main__checkbox-item::after {
+  position: absolute;
+  content: "";
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: url("../img/check.svg") center no-repeat;
+  opacity: 0;
+  -webkit-transition: 0.25s ease-in-out;
+  transition: 0.25s ease-in-out;
+}
+.main__checkbox-text {
+  color: #d6d6d6;
+  margin-left: 8px;
+}
+.main__checkbox-text a {
+  color: #1145FB;
+  text-decoration: underline;
+}
+.main__btn {
+  display: block;
+  font-size: 20px;
+  line-height: 23px;
+  width: 255px;
+  padding: 10px;
+  border-radius: 10px;
+  background-color: #1145FB;
+  color: #fff;
+}
+.main__btn.is-disabled {
+  color: #b4b4b4;
+  border: 1px solid #b4b4b4;
+  background-color: transparent;
+}
+.main__form-row {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  gap: 20px;
+}
+.main__payment {
+  margin-bottom: 30px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+.main__payment-item {
+  margin-left: 30px;
+}
+.main__payment-item:first-child {
+  margin-left: 0;
+}
+.main__qr {
+  margin-bottom: 15px;
+  text-align: center;
+}
+.main__qr-caption {
+  font-size: 10px;
+  line-height: 12px;
+  text-align: center;
+}
+/*# sourceMappingURL=main.css.map */
